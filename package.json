@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "serve -s build",
+    "start": "serve -s dist",
     "build": "vite build",
+    "postbuild": "echo Build completed",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+
   "dependencies": {
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
