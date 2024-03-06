@@ -1,0 +1,41 @@
+.searchInput{
+  margin-left: 10px;
+}
+
+/* General styling for search input and button */
+.searchInput, .searchButton {
+  font-size: 16px; /* Matching font size for consistency */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners like weather cards */
+  margin: 5px; /* Small margin for spacing */
+  border: 2px solid #e0e1dd; /* Border color matching weather cards */
+  background-color: #e0e1dd;
+  color: #14213d; /* White text for readability */
+  outline: none; /* Removes outline to keep it clean */
+}
+
+/* Styling for the search input specifically */
+.searchInput {
+  flex-grow: 1; /* Allows input to fill available space */
+  margin-right: 0; /* No right margin to connect closely with the button */
+}
+
+/* Styling for the search button specifically */
+.searchButton {
+  cursor: pointer; /* Cursor change to indicate clickable */
+  background-color: #f2542d; /* Button color to match .bigFont style for consistency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow consistent with weather cards */
+  transition: background-color 0.3s ease; /* Smooth transition for interaction */
+}
+
+.searchButton:hover {
+  background-color: #c04327; /* Darker shade on hover for interaction feedback */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Additional container styling for alignment */
+.searchContainer {
+  display: flex;
+  justify-content: center; /* Centers the search bar in the available space */
+  padding: 20px; /* Padding around the search area for spacing */
+}

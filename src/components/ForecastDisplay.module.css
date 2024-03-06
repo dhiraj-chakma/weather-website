@@ -1,0 +1,102 @@
+.weather_temp{
+  display: flex;
+}
+.weather_temp p{
+  margin-right: 5px;
+}
+
+.weatherCard{
+  display: flex;
+  flex-direction: column;
+}
+.high_low_temp{
+  display: flex;
+  align-items: center;
+}
+.high_low_temp div{
+   margin-left: 10px;
+}
+.sunset_sunrise{
+  display: flex;
+}
+.sunset_sunrise p{
+  margin-right: 5px;
+}
+
+
+.weatherCard_main {
+  background-color: rgba(125, 120, 120, 0.8); /* Gray with transparency */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  padding-bottom: 80px;
+  margin: 10px;
+  color: #ffffff;
+  height: 12vw;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.weatherCard_main:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.bigFont {
+  font-size: clamp(1vw,6vw,8vw);
+  color: #f2542d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+
+
+.weather_summary_container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather_detail_history{
+  display: flex;
+
+}
+
+.weather_card_details, .weatherChart{
+  flex: 1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three columns of equal width */
+  grid-template-rows: auto auto; /* Creates two rows that adjust to the content's size */
+  gap: 10px; /* Adjust the gap as needed */
+  /* Add any additional styling you need for padding, alignment, etc. */
+}
+
+.weather_card_detail {
+  /* Style for each detail box */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Example shadow for depth */
+  border-radius: 5px; /* Optional rounded corners */
+  background-color: rgba(125, 120, 120, 0.8);
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.weather_card_detail:hover{
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+@media (max-width: 912px) {
+
+  .weather_detail_history{
+    display: block;
+  }
+}
