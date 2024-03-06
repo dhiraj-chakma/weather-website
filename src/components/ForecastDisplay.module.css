@@ -20,12 +20,12 @@
   display: flex;
 }
 .sunset_sunrise p{
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 
 .weatherCard_main {
-  background-color: rgba(125, 120, 120, 0.8); /* Gray with transparency */
+   /* Gray with transparency */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -84,7 +84,7 @@
   padding: 10px;
   box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Example shadow for depth */
   border-radius: 5px; /* Optional rounded corners */
-  background-color: rgba(125, 120, 120, 0.8);
+
   color: #ffffff;
   transition: transform 0.3s ease;
 }

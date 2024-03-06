@@ -10,6 +10,13 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowUp,
+  faArrowDown,
+  faSun,
+  faMoon,
+} from "@fortawesome/free-solid-svg-icons";
 
 // Function to convert Unix timestamp to a readable day of the week
 function getDayOfWeek(unixTimestamp) {
@@ -59,19 +66,29 @@ const ForecastDisplay = ({ forecast, city, fiveDayForecast }) => {
             <div className={styles.high_low_temp}>
               <p>{getDayOfWeek(forecast.dt)}</p>
               <div>
-                <span>Low: </span>
+                <span>
+                  <FontAwesomeIcon icon={faArrowDown} />{" "}
+                </span>
                 <span>{(forecast.main.temp_min - 273.15).toFixed(2)}°C</span>
               </div>
               <div>
-                <span>High: </span>
+                <span>
+                  <FontAwesomeIcon icon={faArrowUp} />{" "}
+                </span>
                 <span>{(forecast.main.temp_max - 273.15).toFixed(2)}°C</span>
               </div>
             </div>
 
             {/* Sunrise and sunset times */}
             <div className={styles.sunset_sunrise}>
-              <p>Sunrise: {convertUnixToReadable(forecast.sys.sunrise)}</p>
-              <p>Sunset: {convertUnixToReadable(forecast.sys.sunset)}</p>
+              <p>
+                <FontAwesomeIcon icon={faSun} />
+                {convertUnixToReadable(forecast.sys.sunrise)}
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faMoon} />{" "}
+                {convertUnixToReadable(forecast.sys.sunset)}
+              </p>
             </div>
           </div>
         </div>
@@ -152,7 +169,7 @@ const ForecastDisplay = ({ forecast, city, fiveDayForecast }) => {
                 tick={{ fill: "black" }}
               />
               <Tooltip />
-              <Legend verticalAlign="top" height={36} /> 
+              <Legend verticalAlign="top" height={36} />
               <Line type="monotone" dataKey="temp" stroke="#14213d" />
               <Line type="monotone" dataKey="feels_like" stroke="#e76f51" />
             </LineChart>
