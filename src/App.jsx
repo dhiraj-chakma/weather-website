@@ -3,7 +3,7 @@ import Search from "./components/Search";
 import styles from "./App.module.css";
 import Footer from "./components/Footer";
 import ForecastDisplay from "./components/ForecastDisplay";
-// Import statement for Bootstrap CSS commented out - unneeded unless you're using Bootstrap components
+
 
 // Main App component
 const App = () => {
@@ -67,14 +67,11 @@ const App = () => {
     fetchData();
   }, [city, apiKey]); // Dependencies for the effect: city and apiKey
 
-  // Effect hook to log current forecast data for debugging purposes
-  React.useEffect(() => {
-    console.log(forecast);
-  }, [forecast]);
+
 
   // Rendering error message if there is an error
   if (error) {
-    return <div>{error}</div>;
+    return <div className={styles.error_mes}>{error}</div>;
   }
 
   // Function to handle search action and update the city state

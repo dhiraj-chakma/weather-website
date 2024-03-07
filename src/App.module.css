@@ -9,3 +9,20 @@ body{
   box-sizing: border-box;
   margin-bottom: 50px;
 }
+
+.error_mes {
+  color: #D8000C; /* Brighter red for higher visibility and to indicate an error */
+  background-color: #FFD2D2; /* Light red/pink background for contrast */
+  font-weight: bold; /* Keeps the text bold */
+  font-size: 1.2em; /* Slightly larger than the default size for emphasis */
+  padding: 10px; /* Adds some space around the text for better readability */
+  border: 1px solid #D8000C; /* Adds a border to make the message pop out */
+  border-radius: 5px; /* Rounds the corners of the border for a softer look */
+  margin: 20px 0; /* Adds some space above and below the message */
+  text-align: center; /* Centers the text for emphasis */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Adds a subtle shadow for a 3D effect */
+  width: 80%; /* Sets a specific width */
+  max-width: 600px; /* Ensures it doesn't get too wide on larger screens */
+  margin-left: auto; /* These two margins allow for */
+  margin-right: auto; /* centering the block element horizontally */
+}
