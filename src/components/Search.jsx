@@ -17,6 +17,7 @@ const Search = ({ onSearch }) => {
         type="text"
         value={city}
         onChange={(event) => setCity(event.target.value)}
+        placeholder="Enter your city here"
       />
       <button className={styles.searchButton} type="submit">Submit</button>
     </form>
